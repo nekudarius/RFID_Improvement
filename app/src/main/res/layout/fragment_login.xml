@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_login_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient_login">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layoutAnimation="@anim/layout_animation_float"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_Header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin35"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="@dimen/margin35"
+                android:fontFamily="@font/open_sans_bold"
+                android:gravity="center"
+                android:text="@string/label_login"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_huge2" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin35"
+                android:layout_marginTop="@dimen/margin20"
+                android:layout_marginRight="@dimen/margin35"
+                android:layout_marginBottom="@dimen/margin15"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_SubHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/open_sans"
+                    android:gravity="center"
+                    android:text="@string/label_login_subHeader"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_semi_medium" />
+
+            </LinearLayout>
+
+            <studio.carbonylgroup.textfieldboxes.TextFieldBoxes
+                android:id="@+id/tfb_Email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin35"
+                android:layout_marginTop="@dimen/margin25"
+                android:layout_marginRight="@dimen/margin35"
+                android:animateLayoutChanges="true"
+                android:background="@drawable/bg_rounded_login_edit_text"
+                app:counterTextColor="@color/colorAccent"
+                app:helperTextColor="@color/colorAccent"
+                app:labelText="NIK"
+                app:primaryColor="@color/colorAccent"
+                app:secondaryColor="@color/colorAccent">
+
+                <studio.carbonylgroup.textfieldboxes.ExtendedEditText
+                    android:id="@+id/et_nik"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="@dimen/text_small"
+                    app:prefixTextColor="@color/colorAccent"
+                    app:suffixTextColor="@color/colorAccent" />
+
+            </studio.carbonylgroup.textfieldboxes.TextFieldBoxes>
+
+
+            <studio.carbonylgroup.textfieldboxes.TextFieldBoxes
+                android:id="@+id/tfb_Password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin35"
+                android:layout_marginTop="@dimen/margin25"
+                android:layout_marginRight="@dimen/margin35"
+                android:animateLayoutChanges="true"
+                android:background="@drawable/bg_rounded_login_edit_text"
+                app:counterTextColor="@color/colorAccent"
+                app:helperTextColor="@color/colorAccent"
+                app:labelText="@string/label_password_hint"
+                app:primaryColor="@color/colorAccent"
+                app:secondaryColor="@color/colorAccent">
+
+                <studio.carbonylgroup.textfieldboxes.ExtendedEditText
+                    android:id="@+id/et_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="@dimen/text_small"
+                    app:prefixTextColor="@color/colorAccent"
+                    app:suffixTextColor="@color/colorAccent" />
+            </studio.carbonylgroup.textfieldboxes.TextFieldBoxes>
+
+
+            <Button
+                android:id="@+id/btn_login"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/margin55"
+                android:layout_gravity="center"
+                android:layout_marginTop="48dp"
+                android:layout_marginBottom="@dimen/margin10"
+                android:background="@drawable/bg_rounded_btn_login"
+                android:fontFamily="@font/open_sans_bold"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/margin95"
+                android:paddingRight="@dimen/margin95"
+                android:text="@string/label_login"
+                android:textColor="@color/color_tv_blue_btn_login"
+                android:textSize="@dimen/text_default" />
+
+
+            <TextView
+                android:id="@+id/tv_LupaSandi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/margin35"
+                android:layout_marginTop="@dimen/margin40"
+                android:layout_marginRight="@dimen/margin35"
+                android:layout_marginBottom="@dimen/margin15"
+                android:fontFamily="@font/open_sans_semibold"
+                android:gravity="center"
+                android:text="@string/label_iei"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_default" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin35"
+                android:layout_marginRight="@dimen/margin35"
+                android:layout_marginBottom="@dimen/margin15"
+                android:fontFamily="@font/open_sans"
+                android:gravity="center"
+                android:text="@string/label_copyright_splash"
+                android:textColor="@color/color_tv_copyright_login"
+                android:textSize="@dimen/text_default" />
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</FrameLayout>

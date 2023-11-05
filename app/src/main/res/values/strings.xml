@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">RFID Improvement</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <!--        LOGIN SCREEN        -->
+    <string name="label_login">Login</string>
+    <string name="label_login_subHeader">Please login with your APO credentials</string>
+    <string name="label_password_hint">Password</string>
+    <string name="label_iei">PT. Indonesia Epson Industry</string>
+    <string name="label_copyright_splash">Copyrights Appli Design</string>
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~   -->
+
+    <!--        DASHBOARD SCREEN        -->
+    <string name="label_welcome">Welcome To Rubic!</string>
+    <string name="label_dashboard_management">Management</string>
+    <string name="content_dashboard_management_1">Register new printer and</string>
+    <string name="content_dashboard_management_2">also remove the old one</string>
+    <string name="label_dashboard_stock_taking">Stock Taking</string>
+    <string name="content_dashboard_stock_taking_1">Just scan the barcode</string>
+    <string name="content_dashboard_stock_taking_2">and update the data!</string>
+    <string name="label_dashboard_stock_taking_rfid">Stock Taking RFID</string>
+    <string name="content_dashboard_stock_taking_rfid_1">Scan the RFID TAG and</string>
+    <string name="content_dashboard_stock_taking_rfid_2">your data will updated!</string>
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~   -->
+
+    <string name="label_header_content_dialog_logout1">Are you sure</string>
+    <string name="label_header_content_dialog_logout2">Logout?</string>
+
+    <string name="label_yes">Yes</string>
+    <string name="label_no">No</string>
+    <string name="progress">Progress</string>
+    <string name="not_yet">Not yet</string>
+</resources>

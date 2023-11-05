@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/shimmerLoading"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvchild"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin20"
+        android:layout_marginVertical="@dimen/margin10"
+        android:foreground="?selectableItemBackground"
+        app:cardCornerRadius="@dimen/margin5">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/contentlyt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin20"
+                        android:layout_marginTop="@dimen/margin20"
+                        android:layout_marginEnd="@dimen/margin5"
+                        android:layout_marginBottom="@dimen/margin10"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_item_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/open_sans_bold"
+                            android:maxLines="1"
+                            android:textColor="@color/color_tv_title_item_list_barang"
+                            android:textSize="@dimen/text_large"
+                            tools:text="Lucida" />
+
+                        <TextView
+                            android:id="@+id/tv_item_serial_number"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/open_sans_semibold"
+                            android:maxLines="1"
+                            android:textColor="@color/color_tv_title_item_list_barang"
+                            android:textSize="@dimen/text_medium"
+                            tools:text="XBZ44132D" />
+
+                        <TextView
+                        android:id="@+id/tv_item_condition_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin10"
+                        android:fontFamily="@font/open_sans_semibold"
+                        android:textColor="@color/color_tv_gray_tv_desc_item_home"
+                        android:textSize="@dimen/text_small"
+                        tools:text="Printer Condition" />
+
+                        <TextView
+                            android:id="@+id/tv_item_condition"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/open_sans_semibold"
+                            android:maxLines="1"
+                            android:text="Full Assy"
+                            android:textColor="@color/color_tv_title_item_list_barang"
+                            android:textSize="@dimen/text_medium" />
+
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/img_printer"
+                        android:layout_width="0dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin5"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin20"
+                        android:layout_marginBottom="20dp"
+                        android:orientation="horizontal"
+                        android:layout_weight="1">
+
+                        <CheckBox
+                            android:id="@+id/cb_rfid_number"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_rfid_number_title"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/margin10"
+                                android:fontFamily="@font/open_sans_semibold"
+                                android:textColor="@color/color_tv_gray_tv_desc_item_home"
+                                android:textSize="@dimen/text_small"
+                                tools:text="RFID Number" />
+
+                            <TextView
+                                android:id="@+id/tv_rfid_number"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:fontFamily="@font/open_sans_semibold"
+                                android:maxLines="1"
+                                android:text="IEI00001-0"
+                                android:textColor="@color/color_tv_title_item_list_barang"
+                                android:textSize="@dimen/text_medium" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginBottom="20dp"
+                        android:layout_weight="1.5">
+
+                        <CheckBox
+                            android:id="@+id/cb_front_part"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Front"/>
+
+                        <CheckBox
+                            android:id="@+id/cb_top_part"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Top"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1.5">
+
+                        <CheckBox
+                            android:id="@+id/cb_left_part"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Left"/>
+
+                        <CheckBox
+                            android:id="@+id/cb_right_part"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Right"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+<!--            <View-->
+<!--                android:id="@+id/shimmerlyt"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="0dp"-->
+<!--                android:layout_margin="@dimen/margin20"-->
+<!--                android:background="@color/softblue"-->
+<!--                app:layout_constraintBottom_toBottomOf="@+id/contentlyt"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent" />-->
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/btn_remove_printer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_round_cancel_24px"
+                android:layout_gravity="center|end"
+                android:background="?selectableItemBackgroundBorderless"
+                android:padding="@dimen/margin5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

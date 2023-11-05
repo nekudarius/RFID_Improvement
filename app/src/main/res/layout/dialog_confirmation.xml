@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_rounded_dialog">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/margin15"
+            android:layout_marginTop="@dimen/margin35"
+            android:layout_marginRight="@dimen/margin15"
+            android:fontFamily="@font/open_sans_semibold"
+            android:gravity="center"
+            android:textColor="@color/color_gray_title_add_dialog"
+            android:textSize="@dimen/text_semi_large"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/label_header_content_dialog_logout1" />
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/margin15"
+            android:layout_marginTop="@dimen/margin5"
+            android:layout_marginRight="@dimen/margin15"
+            android:layout_marginBottom="@dimen/margin5"
+            android:fontFamily="@font/open_sans"
+            android:gravity="center"
+            android:textColor="@color/color_gray_title_add_dialog"
+            android:textSize="@dimen/text_semi_large"
+            app:layout_constraintEnd_toEndOf="@+id/tvTitle"
+            app:layout_constraintStart_toStartOf="@+id/tvTitle"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+            tools:text="want to Logout from system?" />
+
+        <View
+            android:id="@+id/divider1"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/description" />
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="0.5dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/bt_dialog_logout_no"
+            app:layout_constraintStart_toEndOf="@id/bt_dialog_logout_yes"
+            app:layout_constraintTop_toBottomOf="@id/divider1" />
+
+        <View
+            android:id="@+id/divider3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/margin20"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/bt_dialog_logout_yes" />
+
+        <Button
+            android:id="@+id/bt_dialog_logout_no"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/margin45"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/margin20"
+            android:layout_marginEnd="@dimen/margin5"
+            android:background="@drawable/bg_rounded_btn_dialog_cancel"
+            android:fontFamily="@font/open_sans"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:text="@string/label_no"
+            android:textAllCaps="false"
+            android:textColor="@color/color_tv_blue_btn_login"
+            android:textSize="@dimen/text_semi_medium"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/divider2"
+            app:layout_constraintTop_toBottomOf="@id/divider1" />
+
+
+        <Button
+            android:id="@+id/bt_dialog_logout_yes"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/margin45"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/margin5"
+            android:layout_marginEnd="@dimen/margin20"
+            android:background="@drawable/bg_rounded_btn_dialog_ok"
+            android:fontFamily="@font/open_sans"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:text="@string/label_yes"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_semi_medium"
+            app:layout_constraintLeft_toRightOf="@id/divider2"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider1" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

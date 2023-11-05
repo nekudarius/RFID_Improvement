@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_home"
+            >
+
+            <FrameLayout
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:id="@+id/lToolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize">
+
+            <TextView
+                android:fontFamily="@font/open_sans"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin15"
+                android:layout_marginEnd="@dimen/margin15"
+                android:layout_gravity="center_vertical|bottom"
+                android:text= "Connected Readers:"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_semi_large"
+                tools:ignore="MissingPrefix"/>
+            </FrameLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_marginTop="-180dp"
+            android:id="@+id/ll_connected_reader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin15"
+            android:layout_marginRight="@dimen/margin15"
+            android:padding="@dimen/margin10"
+            android:gravity="center_vertical"
+            android:background="@drawable/bg_rounded_login_edit_text"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/iv_main_photo_profile"
+                    android:src="@drawable/baseline_nfc_24"
+                    android:layout_width="@dimen/margin50"
+                    android:layout_height="@dimen/margin50"/>
+
+<!--                <com.tuyenmonkey.mkloader.MKLoader-->
+<!--                    android:id="@+id/mk_main_photo_loading"-->
+<!--                    android:layout_width="@dimen/margin20"-->
+<!--                    android:layout_height="@dimen/margin20"-->
+<!--                    android:layout_centerHorizontal="true"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:layout_marginTop="@dimen/margin15"-->
+<!--                    app:mk_color="@color/white"-->
+<!--                    app:mk_type="ThreePulse" />-->
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin15"
+                android:layout_marginRight="@dimen/margin15"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/tv_main_username"
+                    android:fontFamily="@font/open_sans_semibold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="RFD921031892130"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_semi_medium"
+                    tools:ignore="MissingPrefix"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/margin5">
+
+                    <TextView
+                        android:fontFamily="@font/open_sans"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Model:"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_small_default"
+                        tools:ignore="MissingPrefix"/>
+                    <TextView
+                        android:id="@+id/tv_rfid_device_model"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="@dimen/margin10"
+                        android:text="RFD8500"
+                        android:textColor="@color/black"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin15"
+                android:src="@drawable/ic_more_vert"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/margin45">
+            <TextView
+                android:fontFamily="@font/open_sans"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin15"
+                android:layout_marginEnd="@dimen/margin15"
+                android:layout_marginTop="@dimen/margin15"
+                android:layout_gravity="center_vertical"
+                android:text= "Available Readers:"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_semi_large"
+                tools:ignore="MissingPrefix"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_available_rfid_device"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/margin15"
+                android:layout_marginEnd="@dimen/margin15">
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_add_rfid_device"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:layout_marginBottom="24dp"
+        android:tint="@color/color_blue_gradient_login_2"
+        app:layout_behavior="com.google.android.material.behavior.HideBottomViewOnScrollBehavior"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/baseline_add_24" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

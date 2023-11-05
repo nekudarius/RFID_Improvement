@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/rfid_pairing_device"
+        android:icon="@drawable/baseline_list_24"
+        android:title="Pairing Device"
+        android:iconTint="@color/white"
+        />
+    <item
+        android:id="@+id/rfid_scanning"
+        android:icon="@drawable/baseline_nfc_24"
+        android:title="RFID"/>
+    <item
+        android:id="@+id/rfid_setting"
+        android:icon="@drawable/baseline_settings_24"
+        android:title="Setting"/>
+
+</menu>
