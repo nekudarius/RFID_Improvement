@@ -54,8 +54,8 @@ public class DashboardFragment extends Fragment {
         cvStockTakingRfid.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Navigation.findNavController(view).navigate(R.id.action_dashboardFragment_to_rfidScanFragment);
-                Navigation.findNavController(view).navigate(R.id.action_dashboardFragment_to_selectMenuFragment);
+//                Navigation.findNavController(view).navigate(R.id.action_dashboardFragment_to_selectMenuFragment);
+                Navigation.findNavController(view).navigate(R.id.action_dashboardFragment_to_rfidSelectMenuDashboardFragment);
             }
         });
     }

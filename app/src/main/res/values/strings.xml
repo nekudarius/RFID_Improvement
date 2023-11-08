@@ -25,6 +25,19 @@
     <string name="content_dashboard_stock_taking_rfid_2">your data will updated!</string>
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~   -->
 
+    <!--        RFID SELECT MENU SCREEN        -->
+    <string name="label_title_rfid_select_menu">Select Menu</string>
+    <string name="label_dashboard_pairing">Pairing Device</string>
+    <string name="content_dashboad_pairing_1">Choose your RFID device</string>
+    <string name="content_dashboard_pairing_2">and pair it</string>
+    <string name="label_dashboard_scanning">Scanning</string>
+    <string name="content_dashboard_scanning_1">Perform stock taking</string>
+    <string name="content_dashboard_scanning_2">and finish your job!</string>
+    <string name="label_dashboard_settings_rfid">RFID Settings</string>
+    <string name="content_dashboard_settings_rfid_1">Adjust your RFID setting</string>
+    <string name="content_dashboard_settings_rfid_2">such as sound and distance</string>
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~   -->
+
 
     <!--        LAYOUT EMPTY DATA SCREEN        -->
     <string name="label_empty_data_title">Data is Empty</string>
