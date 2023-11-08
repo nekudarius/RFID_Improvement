@@ -15,6 +15,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -124,11 +125,15 @@ public class RfidScanFragment extends Fragment {
         AppCompatImageButton btnWarning = view.findViewById(R.id.btnWarning);
         AppCompatImageButton btnHelp = view.findViewById(R.id.btnHelp);
         FloatingActionButton fabSubmit = view.findViewById(R.id.fab_submit);
+        ImageButton ivBack = view.findViewById(R.id.iv_back);
+
+        ivBack.setOnClickListener(v -> onBackPressed());
 
 
         btnWarning.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                View view1 = view;
                 DialogHelper.setConfirmationDialog(
                         getChildFragmentManager(),
                         "Error Disconnected!",
@@ -139,7 +144,7 @@ public class RfidScanFragment extends Fragment {
                             @Override
                             public void onRightButtonClick(DialogFragment dialog, View view) {
                                 Toast.makeText(getActivity(),"yes",Toast.LENGTH_SHORT).show();
-//                                Navigation.findNavController(view).navigate(R.id.action_rfidScanFragment_to_rfidPairingDeviceHomescreenFragment);
+                                Navigation.findNavController(view1).navigate(R.id.action_rfidScanFragment_to_rfidPairingDeviceHomescreenFragment);
                             }
 
                             @Override
@@ -172,6 +177,7 @@ public class RfidScanFragment extends Fragment {
         fabSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                View view1 = view;
                 DialogHelper.setConfirmationDialog(
                         getChildFragmentManager(),
                         "Are you sure?",
@@ -184,7 +190,7 @@ public class RfidScanFragment extends Fragment {
                             @Override
                             public void onRightButtonClick(DialogFragment dialog, View view) {
                                 Toast.makeText(getActivity(),"yes",Toast.LENGTH_SHORT).show();
-//                                Navigation.findNavController(view).navigate(R.id.action_rfidScanFragment_to_rfidStockTakingListFragment);
+                                Navigation.findNavController(view1).navigate(R.id.action_rfidScanFragment_to_rfidStockTakingListFragment);
                             }
 
                             @Override
@@ -196,5 +202,11 @@ public class RfidScanFragment extends Fragment {
             }
         });
 
+    }
+
+    public void onBackPressed() {
+        if (!Navigation.findNavController(requireView()).popBackStack()) {
+            requireActivity().finish();
+        }
     }
 }

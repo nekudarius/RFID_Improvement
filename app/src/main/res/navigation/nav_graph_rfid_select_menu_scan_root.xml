@@ -22,12 +22,19 @@
         <action
             android:id="@+id/action_rfidScanFragment_to_rfidStockTakingListFragment"
             app:destination="@id/rfidStockTakingListFragment" />
+        <action
+            android:id="@+id/action_rfidScanFragment_to_rfidPairingDeviceHomescreenFragment"
+            app:destination="@id/rfidPairingDeviceHomescreenFragment" />
     </fragment>
     <fragment
         android:id="@+id/rfidStockTakingSessionFragment"
         android:name="com.rubic.rfidimprovement.feature.stock_taking_rfid.rfid_scan.session_list.RfidStockTakingSessionFragment"
         android:label="fragment_rfid_stock_taking_session"
-        tools:layout="@layout/fragment_rfid_stock_taking_session" />
+        tools:layout="@layout/fragment_rfid_stock_taking_session" >
+        <action
+            android:id="@+id/action_rfidStockTakingSessionFragment_to_rfidStockTakingListFragment"
+            app:destination="@id/rfidStockTakingListFragment" />
+    </fragment>
     <fragment
         android:id="@+id/rfidStockTakingListFragment"
         android:name="com.rubic.rfidimprovement.feature.stock_taking_rfid.rfid_scan.stock_taking_list.RfidStockTakingListFragment"

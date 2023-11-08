@@ -13,6 +13,7 @@ import androidx.viewpager2.widget.ViewPager2;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -48,6 +49,10 @@ public class RfidPairingDeviceOptionFragment extends Fragment {
         AppCompatImageButton btnHelpPairingOption = view.findViewById(R.id.btnHelpPairingOption);
         RfidPairingDeviceOptionAdapter rfidPairingDeviceOptionAdapter = new RfidPairingDeviceOptionAdapter(getActivity());
         viewPagerPairingOption.setAdapter(rfidPairingDeviceOptionAdapter);
+
+        ImageButton ivBack = view.findViewById(R.id.iv_back);
+
+        ivBack.setOnClickListener(v -> onBackPressed());
 
         tabLayoutPairingOption.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
@@ -91,6 +96,12 @@ public class RfidPairingDeviceOptionFragment extends Fragment {
                 );
             }
         });
+    }
+
+    public void onBackPressed() {
+        if (!Navigation.findNavController(requireView()).popBackStack()) {
+            requireActivity().finish();
+        }
     }
 
 }

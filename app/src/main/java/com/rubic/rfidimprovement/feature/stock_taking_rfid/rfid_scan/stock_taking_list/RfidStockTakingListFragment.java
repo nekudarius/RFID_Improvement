@@ -12,6 +12,7 @@ import androidx.navigation.Navigation;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 
 import com.rubic.rfidimprovement.R;
@@ -39,6 +40,9 @@ public class RfidStockTakingListFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         LinearLayout llRegisterPrinter = view.findViewById(R.id.ll_register_printer);
+        ImageButton ivBack = view.findViewById(R.id.iv_back);
+
+        ivBack.setOnClickListener(v -> onBackPressed());
 
         llRegisterPrinter.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -46,5 +50,11 @@ public class RfidStockTakingListFragment extends Fragment {
                 Navigation.findNavController(view).navigate(R.id.action_rfidStockTakingListFragment_to_rfidScanFragment);
             }
         });
+    }
+
+    public void onBackPressed() {
+        if (!Navigation.findNavController(requireView()).popBackStack()) {
+            requireActivity().finish();
+        }
     }
 }

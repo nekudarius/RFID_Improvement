@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.shimmer.ShimmerFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/shimmerLoading"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvParent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/margin10"
+        android:foreground="?selectableItemBackground"
+        app:cardCornerRadius="@dimen/margin5"
+        app:cardElevation="2dp">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_list_home"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin20"
+                    android:layout_marginTop="@dimen/margin20"
+                    android:layout_marginEnd="@dimen/margin20"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_item_st_period"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/open_sans_bold"
+                            android:maxLines="1"
+                            android:text="August 2021"
+                            android:textColor="@color/color_tv_title_item_list_barang"
+                            android:textSize="@dimen/text_large"
+                            tools:ignore="MissingPrefix" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin10"
+                            android:fontFamily="@font/open_sans_semibold"
+                            android:text="PIC 1"
+                            android:textColor="@color/color_tv_gray_tv_desc_item_home"
+                            android:textSize="@dimen/text_small"
+                            tools:ignore="MissingPrefix" />
+
+                        <TextView
+                            android:id="@+id/tv_item_st_pic_one"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/open_sans_semibold"
+                            android:maxLines="1"
+                            android:text="Alex Telles"
+                            android:textColor="@color/color_gray_tv_name_profil"
+                            android:textSize="@dimen/text_semi_medium"
+                            tools:ignore="MissingPrefix" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin10"
+                            android:fontFamily="@font/open_sans_semibold"
+                            android:text="PIC 2"
+                            android:textColor="@color/color_tv_gray_tv_desc_item_home"
+                            android:textSize="@dimen/text_small"
+                            tools:ignore="MissingPrefix" />
+
+                        <TextView
+                            android:id="@+id/tv_item_st_pic_two"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/open_sans_semibold"
+                            android:maxLines="1"
+                            android:text="Raphael Varane"
+                            android:textColor="@color/color_gray_tv_name_profil"
+                            android:textSize="@dimen/text_semi_medium"
+                            tools:ignore="MissingPrefix" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_item_st_scanned"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/open_sans_bold"
+                            android:text="298"
+                            android:textAlignment="textEnd"
+                            android:textColor="@color/color_tv_title_item_list_barang"
+                            android:textSize="28sp" />
+
+                        <TextView
+                            android:id="@+id/tv_label_scanned"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_item_st_scanned"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="-10dp"
+                            android:fontFamily="@font/open_sans_bold"
+                            android:text="Scanned Printers"
+                            android:textAlignment="textEnd"
+                            android:textColor="@color/color_tv_gray_tv_desc_item_home"
+                            android:textSize="@dimen/text_semi_medium" />
+
+                        <TextView
+                            android:id="@+id/tv_item_st_on_progress"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tv_label_scanned"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="@dimen/margin5"
+                            android:drawableEnd="@drawable/ic_progress"
+                            android:drawablePadding="2dp"
+                            android:fontFamily="@font/open_sans_bold"
+                            android:gravity="center_vertical"
+                            android:text="On Progress"
+                            android:textAlignment="textEnd"
+                            android:textColor="@color/color_blue_gradient_login_2"
+                            tools:ignore="RtlCompat" />
+
+                        <TextView
+                            android:id="@+id/tv_item_st_done"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_item_st_on_progress"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="@dimen/margin5"
+                            android:drawableEnd="@drawable/ic_checkbox_circle_line"
+                            android:drawablePadding="2dp"
+                            android:fontFamily="@font/open_sans_bold"
+                            android:gravity="center_vertical"
+                            android:text="Done"
+                            android:textAlignment="textEnd"
+                            android:textColor="@color/color_bg_status_publish"
+                            tools:ignore="RtlCompat" />
+                    </LinearLayout>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin5"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        fontPath="fonts/open_sans_semibold.ttf"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin20"
+                        android:layout_weight="0.3"
+                        android:text="@string/label_kode"
+                        android:textColor="@color/color_tv_phone_number_profile"
+                        android:textSize="@dimen/text_smallest"
+                        android:visibility="gone"
+                        tools:ignore="MissingPrefix" />
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin20"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/open_sans_semibold"
+                        android:text="Start Date"
+                        android:textColor="@color/color_tv_gray_tv_desc_item_home"
+                        android:textSize="@dimen/text_small"
+                        tools:ignore="MissingPrefix" />
+
+
+                    <TextView
+                        android:id="@+id/tv_item_st_finish_label"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin10"
+                        android:layout_marginRight="@dimen/margin20"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/open_sans_semibold"
+                        android:text="Finish Date"
+                        android:textColor="@color/color_tv_gray_tv_desc_item_home"
+                        android:textSize="@dimen/text_small"
+                        tools:ignore="MissingPrefix" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin20"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvKode"
+                        fontPath="fonts/open_sans_bold.ttf"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin20"
+                        android:layout_weight="0.3"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="002"
+                        android:textColor="@color/color_tv_blue_btn_login"
+                        android:textSize="@dimen/text_semi_medium"
+                        android:visibility="gone"
+                        tools:ignore="MissingPrefix" />
+
+                    <TextView
+                        android:id="@+id/tv_item_st_start"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin20"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/open_sans_semibold"
+                        android:maxLines="1"
+                        android:text="14-8-2018, 14:16"
+                        android:textColor="@color/color_gray_tv_name_profil"
+                        android:textSize="@dimen/text_semi_medium"
+                        tools:ignore="MissingPrefix" />
+
+                    <TextView
+                        android:id="@+id/tv_item_st_finish"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin10"
+                        android:layout_marginRight="@dimen/margin20"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/open_sans_semibold"
+                        android:maxLines="1"
+                        android:text="14-8-2018, 14:16"
+                        android:textColor="@color/color_gray_tv_name_profil"
+                        android:textSize="@dimen/text_semi_medium"
+                        tools:ignore="MissingPrefix" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/cvShimmer"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_margin="@dimen/margin20"
+                android:background="@color/bg_shimmer_loading" />
+        </FrameLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</com.facebook.shimmer.ShimmerFrameLayout>
